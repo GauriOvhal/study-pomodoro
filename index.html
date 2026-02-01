@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>FocusFlow Pomodoro</title>
+
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+
+    <body>
+
+        <div class="theme-toggle">
+            <button id="themeBtn">🌙 Dark Mode</button>
+        </div>
+
+        <div id="setupScreen" class="container">
+            <h1 class="main-title">Study Goal</h1>
+            <p class="sub-text">Set your focus duration to begin.</p>
+            <div class="input-group">
+                <input type="number" id="hoursInput" value="1" min="0.5" step="0.5">
+                <span class="unit-label"> HOURS</span>
+            </div>
+            <button id="initBtn" class="btn-green"> Start Studying! </button>
+        </div>
+
+        <div id="timerScreen" class="container hidden">
+            <div id="progressContainer" class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <h1 id="status">Study Time !</h1>
+            <div class="timer-display" id="timer">25:00</div>
+            
+            <div class="info-text">
+                Goal: <span id="goalDisplay" class="highlight">0</span> Hours
+            </div>
+
+            <div class="btn-group">
+                <button id="startBtn" class="btn-green">Start</button>
+                <button id="resetBtn" class="btn-green">Reset</button>
+            </div>
+
+            <div class="settings-row">
+                <div class="mute-container">
+                    <label class="mute-label">
+                        <input type="checkbox" id="muteToggle"> 🔇 Mute
+                    </label>
+                </div>
+                <div class="sound-select-container">
+                    <select id="soundSelect">
+                        <option value="https://actions.google.com/sounds/v1/alarms/beep_short.ogg">Digital Beep</option>
+                        <option value="https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg">Bugle Call</option>
+                        <option value="https://actions.google.com/sounds/v1/clocks/alarm_clock_ringing_short.ogg">Classic Bell</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="sessionCount"> SESSIONS REMAINING: 0</div>
+        </div>
+
+        <script src="func.js"></script>
+    </body>
+</html>

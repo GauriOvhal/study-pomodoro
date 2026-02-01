@@ -1,0 +1,187 @@
+:root 
+{
+    --bg-color: #ffffff;
+    --text-color: #2c3e50;
+    --secondary-text: #7f8c8d;
+    --input-bg: #ffffff;
+    --bar-bg: #000000; 
+    --accent-green: #2ecc71;
+    --hover-green: #27ae60;
+    --progress-fill: #f1c40f; 
+}
+
+[data-theme="dark"] 
+{
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --secondary-text: #95a5a6;
+    --input-bg: #1e1e1e;
+    --bar-bg: #ffffff; 
+}
+
+body 
+{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.container 
+{ 
+    text-align: center; 
+    width: 90%; 
+    max-width: 900px; 
+}
+
+.hidden 
+{ 
+    display: none !important; 
+}
+
+
+/* THEME TOGGLE */
+.theme-toggle 
+{ 
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+}
+
+#themeBtn 
+{
+    background: none; border: 1px solid var(--secondary-text);
+    color: var(--secondary-text); padding: 10px 20px;
+    border-radius: 25px; cursor: pointer;
+}
+
+
+/* PROGRESS BAR */
+.progress-container 
+{
+    width: 100%;
+    height: 16px;
+    background: var(--bar-bg);
+    border-radius: 10px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.progress-bar 
+{
+    width: 0%;
+    height: 100%;
+    background: var(--progress-fill);
+    transition: width 1s linear; 
+}
+
+
+/* SETUP SCREEN SCALING */
+.main-title 
+{ 
+    font-size: 5.5rem; 
+    margin-bottom: 10px; 
+}
+
+.sub-text 
+{ 
+    font-size: 2rem; 
+    margin-bottom: 40px; 
+}
+
+.input-group 
+{ 
+    margin-bottom: 70px; 
+}
+
+input[type="number"] 
+{
+    background: var(--input-bg);
+    color: var(--text-color);
+    border: 4px solid var(--accent-green);
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 3.5rem; 
+    font-weight: 800;
+}
+
+.unit-label 
+{ 
+    font-size: 3rem; 
+    font-weight: bold; 
+    color: var(--accent-green); 
+}
+
+
+/* TIMER SCREEN SCALING */
+#status 
+{ 
+    font-size: 4rem; 
+    margin-bottom: 0; 
+}
+
+
+.timer-display 
+{
+    font-size: 17rem; 
+    font-weight: 900;
+    margin: 10px 0;
+    line-height: 1;
+}
+
+.info-text 
+{ 
+    font-size: 2.2rem; 
+    margin-bottom: 40px; 
+} 
+
+.highlight 
+{ 
+    color: var(--accent-green); 
+    font-weight: bold; 
+}
+
+.btn-group 
+{ 
+    display: flex; 
+    gap: 25px; 
+    justify-content: center; 
+    margin-bottom: 40px; 
+}
+
+.btn-green 
+{
+    background-color: var(--accent-green);
+    color: white;
+    border: none;
+    padding: 24px 75px; 
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 70px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
+}
+
+.settings-row 
+{ 
+    display: flex; 
+    justify-content: center; 
+    gap: 40px; 
+    margin-bottom: 30px; 
+    font-size: 1.4rem; 
+}
+
+#sessionCount 
+{ 
+    font-weight: bold; 
+    color: var(--secondary-text); 
+    letter-spacing: 2px; 
+    font-size: 1.2rem; 
+}
